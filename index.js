@@ -19,8 +19,7 @@ const Gameboard = (() => {
       boardHTML += `<div class="square" id="square-${index}">${square}</div>`;
     });
     document.querySelector("#gameboard").innerHTML = boardHTML;
-    const squares = (document.querySelector("#gameboard").innerHTML =
-      boardHTML);
+    const squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
       square.addEventListener("click", Game.handleClick);
     });
@@ -64,8 +63,7 @@ const Game = (() => {
     currentPlayerIndex = 0;
     gameOver = false;
     Gameboard.render();
-    const squares = (document.querySelector("#gameboard").innerHTML =
-      boardHTML);
+    const squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
       square.addEventListener("click", handleClick);
     });
