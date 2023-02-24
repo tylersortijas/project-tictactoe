@@ -136,6 +136,7 @@ const Game = (() => {
   };
 })();
 
+// Restart button to restart the game
 const restartButton = document.querySelector("#restart-button");
 restartButton.addEventListener("click", () => {
   Game.restart();
